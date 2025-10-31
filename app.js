@@ -1,2 +1,1 @@
-
-document.getElementById("myId").innerText = "Hello, World!";
+console.log(16e-4);
