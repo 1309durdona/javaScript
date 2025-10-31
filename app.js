@@ -1,31 +1,38 @@
 
-let mas = ["Muminniyoz", "Jumaniyoz", "Niyozbek", "Shonazarovlar"];
+let a;
+let b = undefined;
+let c = null;
 
-console.log(mas);
+console.log(a); // undefined
+console.log(b); // undefined
+console.log(c); // null
 
-let talaba = {
-    ism: "Jumaniyoz",
-    familiya: "Shonazarov",
-    yoshi: 25,
-    malumoti: "Oliy",
-    kursi: 4,
-    fakulteti: "Informatika va axborot texnologiyalari",
-    oila: {
-        ota: "Murodov Shomurod",
-        ona: "Eliyeva Gulzoda",
-        opa: "Shonazaova Izzatoy",
-        aka: "Shonazarov Muminniyoz",
-        singil: "Shonazarova Hulkaroy",
-        uka: "Shonazarov Niyozbek",
-        rafiqa: "Tayloqova Durdona",
-        bolalar: {
-           ism: "Shomurova Soliha",
-            malumot: {
-                yoshi: 5,
-                maktabi: "Maktab 1"
-            }
-        }
-    }
-}
+a = 10;
+console.log(a);
+a = undefined;
+console.log(a);
 
-console.log(talaba);
+let ism = "";
+console.log(ism); // empty string
+console.log(typeof ism);
+
+let malumot = {ism: "Ali", yoshi: 25};
+console.log(malumot);
+console.log(typeof malumot.ism); // string
+console.log(typeof malumot.yoshi); // number
+
+malumot = null;
+console.log(malumot); // null
+console.log(typeof malumot); // object
+
+
+console.log(undefined == null);
+console.log(undefined === null);
+
+let mass = [1, 2, 3];
+console.log(mass[5]); // undefined
+console.log(typeof mass);
+
+
+
+
