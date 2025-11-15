@@ -16,9 +16,11 @@ let txt = "";
 for(s in person){
     txt += person[s] + " " ;
 }
-console.log(txt);
+console.log(txt);  
 
-let mas = txt.split();
+
+
+let mas = txt.split();   
 console.log(mas);
 
 delete person.age;
