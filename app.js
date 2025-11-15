@@ -12,6 +12,22 @@ x.age = 50;
 console.log(x);
 console.log(person);
 
+let txt = "";
+for(s in person){
+    txt += person[s] + " " ;
+}
+console.log(txt);
+
+let mas = txt.split();
+console.log(mas);
+
+delete person.age;
+delete person.lastName;
+console.log(person);
+
+
+
+
 
 
 
