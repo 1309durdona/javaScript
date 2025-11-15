@@ -19,7 +19,7 @@ for(s in person){
 console.log(txt);  
 
 
-
+ 
 let mas = txt.split();   
 console.log(mas);
 
