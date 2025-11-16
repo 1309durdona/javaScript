@@ -4,17 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Impossible Shader — Audio Reactive</title>
+    <style>
+        html,body{height:100%;margin:0;background:#000;overflow:hidden;font-family:system-ui,Segoe UI,Roboto,Arial}
+        #glcanvas{display:block;position:fixed;inset:0;width:100%;height:100%;z-index:0}
+        #ui{position:fixed;z-index:2;left:12px;top:12px;color:#fff;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.18));backdrop-filter:blur(6px);padding:10px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+        #ui button,input{margin:6px 4px;display:inline-block}
+        #controls{margin-top:6px;display:flex;gap:6px;align-items:center}
+        #hint{font-size:12px;opacity:0.95;margin:6px 0 0}
+        label{font-size:12px;color:#ddd}
+        input[type=range]{vertical-align:middle}
+    </style>
 </head>
 
 <body>
 
 
-    <p id="info">
+    <canvas id="glcanvas"></canvas>
 
-    </p>
-
-    
+    <div id="ui">
+        <div style="display:flex;gap:8px;align-items:center">
+            <button id="toggle">Buni qilib bo'lmaydiku?</button>
+            <button id="mic">Mic: Off</button>
+            <input id="file" type="file" accept="audio/*">
+            <button id="screenshot">Screenshot</button>
+        </div>
+        <div id="controls">
+            <label>Sensitivity <input id="sens" type="range" min="0" max="4" step="0.01" value="1"></label>
+            <label>Glow <input id="glow" type="range" min="0" max="2" step="0.01" value="0.8"></label>
+            <label>Speed <input id="speed" type="range" min="0" max="3" step="0.01" value="1"></label>
+        </div>
+        <p id="hint">Sichqoncha bilan suring yoki tegib o'ting — mikrofondan ovoz olib rang va nurni boshqaradi.</p>
+    </div>
 
     <script src="./app.js"></script>
 
